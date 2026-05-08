@@ -79,6 +79,7 @@ export async function fetchNews(category = 'technology', forceRefresh = false) {
     return articles;
   }
 
+  try {
     // Switching to GNews.io as an alternative API
     const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&max=10&apikey=${API_KEY}`;
     
